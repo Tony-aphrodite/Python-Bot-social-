@@ -1,5 +1,7 @@
 # Political Monitor Analytics Platform
 
+[![CI](https://github.com/Tony-aphrodite/Python-Bot-social-/actions/workflows/ci.yml/badge.svg)](https://github.com/Tony-aphrodite/Python-Bot-social-/actions/workflows/ci.yml)
+
 A modern, responsive web dashboard for political influencer monitoring with drag-and-drop dashboard builder, data visualization, and comprehensive analytics. Built with React 18 and designed for large video wall displays.
 
 ## 🚀 Features
