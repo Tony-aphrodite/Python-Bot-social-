@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # react-scripts turns ESLint warnings into errors when CI is set.
+      # The code has existing lint warnings that the Vercel deploy builds
+      # with, so keep them as warnings here too.
+      - run: npm run build
+        env:
+          CI: "false"
